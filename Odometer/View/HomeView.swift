@@ -20,6 +20,27 @@ struct HomeView: View {
             .font(.title2)
             .foregroundColor(.secondary)
     }
+    
+    private var simpleNumber: Text {
+        Text(number.description)
+            .font(.system(size: 100, weight: .bold, design: .rounded))
+            .foregroundColor(.accentColor)
+    }
+    
+    private var generateRandomNumberButton: some View {
+        Button {
+            number = .random(in: 99...999)
+        } label: {
+            Text("Generate random number")
+                .foregroundColor(.white)
+                .font(.title2)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(RoundedRectangle(cornerRadius: 13, style: .continuous))
+                .padding(.horizontal)
+        }
+    }
+
 
     //MARK: Body
     
@@ -27,23 +48,9 @@ struct HomeView: View {
         VStack(spacing: 0) {
             header
             
-            Text(number.description)
-                .font(.system(size: 100))
-                .bold()
-                .foregroundColor(.accentColor)
-            
-            Button {
-                
-            } label: {
-                Text("Generate random number")
-                    .foregroundColor(.white)
-                    .font(.title2)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(RoundedRectangle(cornerRadius: 13, style: .continuous))
-                    .padding(.horizontal)
-            }
+            simpleNumber
 
+            generateRandomNumberButton
         }
     }
 }
