@@ -41,7 +41,6 @@ struct HomeView: View {
         }
     }
 
-
     //MARK: Body
     
     var body: some View {

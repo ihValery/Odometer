@@ -11,6 +11,9 @@
 		801DFE9528563C99008151EE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801DFE9428563C99008151EE /* HomeView.swift */; };
 		801DFE9728563C99008151EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801DFE9628563C99008151EE /* Assets.xcassets */; };
 		801DFE9A28563C99008151EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801DFE9928563C99008151EE /* Preview Assets.xcassets */; };
+		801DFEA22856494C008151EE /* OneCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801DFEA12856494C008151EE /* OneCardView.swift */; };
+		808B07E82857A7120078B3A5 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808B07E72857A7120078B3A5 /* CardModel.swift */; };
+		808B07EB2857ACB10078B3A5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808B07EA2857ACB10078B3A5 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		801DFE9428563C99008151EE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		801DFE9628563C99008151EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		801DFE9928563C99008151EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		801DFEA12856494C008151EE /* OneCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCardView.swift; sourceTree = "<group>"; };
+		808B07E72857A7120078B3A5 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		808B07EA2857ACB10078B3A5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				801DFE9228563C99008151EE /* OdometerApp.swift */,
+				808B07E62857A7010078B3A5 /* Model */,
 				801DFEA028563CA7008151EE /* View */,
+				808B07E92857AC940078B3A5 /* Extension */,
 				801DFE9628563C99008151EE /* Assets.xcassets */,
 				801DFE9828563C99008151EE /* Preview Content */,
 			);
@@ -71,8 +79,25 @@
 			isa = PBXGroup;
 			children = (
 				801DFE9428563C99008151EE /* HomeView.swift */,
+				801DFEA12856494C008151EE /* OneCardView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		808B07E62857A7010078B3A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				808B07E72857A7120078B3A5 /* CardModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		808B07E92857AC940078B3A5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				808B07EA2857ACB10078B3A5 /* Color.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				801DFE9528563C99008151EE /* HomeView.swift in Sources */,
+				808B07E82857A7120078B3A5 /* CardModel.swift in Sources */,
+				801DFEA22856494C008151EE /* OneCardView.swift in Sources */,
+				808B07EB2857ACB10078B3A5 /* Color.swift in Sources */,
 				801DFE9328563C99008151EE /* OdometerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
