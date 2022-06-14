@@ -12,6 +12,7 @@
 		801DFE9728563C99008151EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801DFE9628563C99008151EE /* Assets.xcassets */; };
 		801DFE9A28563C99008151EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801DFE9928563C99008151EE /* Preview Assets.xcassets */; };
 		801DFEA22856494C008151EE /* OneCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801DFEA12856494C008151EE /* OneCardView.swift */; };
+		805691862858DA870085CDB2 /* CardVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805691852858DA870085CDB2 /* CardVM.swift */; };
 		808B07E82857A7120078B3A5 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808B07E72857A7120078B3A5 /* CardModel.swift */; };
 		808B07EB2857ACB10078B3A5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808B07EA2857ACB10078B3A5 /* Color.swift */; };
 /* End PBXBuildFile section */
@@ -23,6 +24,7 @@
 		801DFE9628563C99008151EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		801DFE9928563C99008151EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		801DFEA12856494C008151EE /* OneCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCardView.swift; sourceTree = "<group>"; };
+		805691852858DA870085CDB2 /* CardVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardVM.swift; sourceTree = "<group>"; };
 		808B07E72857A7120078B3A5 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		808B07EA2857ACB10078B3A5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +61,7 @@
 			children = (
 				801DFE9228563C99008151EE /* OdometerApp.swift */,
 				808B07E62857A7010078B3A5 /* Model */,
+				805691842858DA750085CDB2 /* ViewModel */,
 				801DFEA028563CA7008151EE /* View */,
 				808B07E92857AC940078B3A5 /* Extension */,
 				801DFE9628563C99008151EE /* Assets.xcassets */,
@@ -82,6 +85,14 @@
 				801DFEA12856494C008151EE /* OneCardView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		805691842858DA750085CDB2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				805691852858DA870085CDB2 /* CardVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		808B07E62857A7010078B3A5 /* Model */ = {
@@ -170,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				805691862858DA870085CDB2 /* CardVM.swift in Sources */,
 				801DFE9528563C99008151EE /* HomeView.swift in Sources */,
 				808B07E82857A7120078B3A5 /* CardModel.swift in Sources */,
 				801DFEA22856494C008151EE /* OneCardView.swift in Sources */,
