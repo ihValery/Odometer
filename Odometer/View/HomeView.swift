@@ -13,44 +13,36 @@ struct HomeView: View {
     
     //MARK: Properties
     
-    @State private var number: Int = 100
-    
-    private var header: Text {
-        Text("Create Odometer")
-            .font(.title2)
-            .foregroundColor(.secondary)
+    private var cardViewModel = CardVM()
+
+    private var backgroundImage: some View {
+        Image("backgroundFoto")
+            .resizable()
+            .ignoresSafeArea()
+            .scaledToFill()
     }
     
-    private var simpleNumber: Text {
-        Text(number.description)
-            .font(.system(size: 100, weight: .bold, design: .rounded))
-            .foregroundColor(.accentColor)
-    }
-    
-    private var generateRandomNumberButton: some View {
-        Button {
-            number = .random(in: 99...999)
-        } label: {
-            Text("Generate random number")
-                .foregroundColor(.white)
-                .font(.title2)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(RoundedRectangle(cornerRadius: 13, style: .continuous))
-                .padding(.horizontal)
-        }
+    private var header: some View {
+        Text("Infinity Carusel")
+            .font(.system(size: 40))
+            .foregroundColor(.muddyWaters)
+            .shadow(color: .oldCopper, radius: 10, x: 0, y: 0)
     }
 
     //MARK: Body
     
     var body: some View {
-        VStack(spacing: 0) {
-            header
+        ZStack(alignment: .bottom) {
+//            header
             
-            simpleNumber
-
-            generateRandomNumberButton
+            GeometryReader { grProxy in
+                ForEach(cardViewModel.models) { card in
+                    OneCardView(card)
+                }
+                .frame(width: grProxy.size.width)
+            }
         }
+//        .background(backgroundImage)
     }
 }
 
