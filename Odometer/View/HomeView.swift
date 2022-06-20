@@ -33,16 +33,18 @@ struct HomeView: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-//            header
+            header
             
             GeometryReader { grProxy in
-                ForEach(cardViewModel.models) { card in
-                    OneCardView(card)
+                HStack {
+                    ForEach(cardViewModel.models) { card in
+                        OneCardView(card)
+                    }
+                    .frame(width: grProxy.size.width)
                 }
-                .frame(width: grProxy.size.width)
             }
         }
-//        .background(backgroundImage)
+        .background(backgroundImage)
     }
 }
 
