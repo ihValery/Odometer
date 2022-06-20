@@ -22,10 +22,13 @@ struct OneCardView: View {
             RoundedRectangle(cornerRadius: 25, style: .continuous)
                 .fill(card.color)
                 .frame(width: grProxy.size.width, height: grProxy.size.width)
-                .overlay(
+                .mask(
                     Text(card.number.description)
-                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .font(.system(size: grProxy.size.width, weight: .bold, design: .rounded))
+                        .background(.white)
+                        .compositingGroup()
+                        .luminanceToAlpha()
                 )
         }
         .padding()
@@ -43,5 +46,6 @@ struct OneCardView_Previews: PreviewProvider {
     
     static var previews: some View {
         OneCardView(card)
+//            .background(.green)
     }
 }
