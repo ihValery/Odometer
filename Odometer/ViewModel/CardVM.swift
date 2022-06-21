@@ -13,9 +13,16 @@ final class CardVM: ObservableObject {
     
     //MARK: Properties
     
-    @Published var models: [CardModel] = [
+    @Published var brown: [CardModel] = [
         CardModel(1, .muddyWaters),
         CardModel(2, .oldCopper),
         CardModel(3, .englishWalnut)
+    ]
+    
+    @Published var bambooModels: [CardModel] = [
+        CardModel(1, .muddyWaters),
+        CardModel(2, .oldCopper),
+        CardModel(3, .englishWalnut),
+        CardModel(4, .muddyWaters),
     ]
 }

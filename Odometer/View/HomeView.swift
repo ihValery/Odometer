@@ -34,16 +34,27 @@ struct HomeView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             header
-            
+
             GeometryReader { grProxy in
-                HStack {
-                    ForEach(cardViewModel.models) { card in
-                        OneCardView(card)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(cardViewModel.brown) { card in
+                            OneCardView(card)
+                                .frame(width: grProxy.size.width)
+                        }
                     }
-                    .frame(width: grProxy.size.width)
                 }
             }
+//            GeometryReader { grProxy in
+//                HStack {
+//                    ForEach(cardViewModel.models) { card in
+//                        OneCardView(card)
+//                    }
+//                    .frame(width: grProxy.size.width)
+//                }
+//            }
         }
+//        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(backgroundImage)
     }
 }

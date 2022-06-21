@@ -12,24 +12,18 @@ import SwiftUI
 struct OneCardView: View {
     
     //MARK: Properties
-
+    
     private var card: CardModel
     
     //MARK: Body
     
     var body: some View {
         GeometryReader { grProxy in
-            RoundedRectangle(cornerRadius: 25, style: .continuous)
-                .fill(card.color)
+            Rectangle()
                 .frame(width: grProxy.size.width, height: grProxy.size.width)
-                .mask(
-                    Text(card.number.description)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .font(.system(size: grProxy.size.width, weight: .bold, design: .rounded))
-                        .background(.white)
-                        .compositingGroup()
-                        .luminanceToAlpha()
-                )
+                .background(.ultraThinMaterial)
+                .mask(inversionText(grProxy))
+                .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
         }
         .padding()
     }
@@ -37,15 +31,32 @@ struct OneCardView: View {
     init(_ card: CardModel) {
         self.card = card
     }
+    
+    //MARK: Private Methods
+
+    private func inversionText(_ grProxy: GeometryProxy) -> some View {
+        Text(card.number.description)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .hanaleiFillFont(size: grProxy.size.width)
+            .foregroundColor(.black)
+            .background(.white)
+            .compositingGroup()
+            .luminanceToAlpha()
+    }
 }
 
 //MARK: - PreviewProvider
 
 struct OneCardView_Previews: PreviewProvider {
-    static let card = CardModel(1, .muddyWaters)
+    static let card = CardModel(1, .bayLeaf)
     
     static var previews: some View {
         OneCardView(card)
-//            .background(.green)
+            .background(
+                Image("backgroundBamboo")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFill()
+            )
     }
 }
