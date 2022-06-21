@@ -13,6 +13,9 @@
 		801DFE9A28563C99008151EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801DFE9928563C99008151EE /* Preview Assets.xcassets */; };
 		801DFEA22856494C008151EE /* OneCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801DFEA12856494C008151EE /* OneCardView.swift */; };
 		805691862858DA870085CDB2 /* CardVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805691852858DA870085CDB2 /* CardVM.swift */; };
+		80569188286205DF0085CDB2 /* BambooHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80569187286205DF0085CDB2 /* BambooHomeView.swift */; };
+		8056918F28621AA10085CDB2 /* HanaleiFill-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8056918D28621A850085CDB2 /* HanaleiFill-Regular.ttf */; };
+		8056919128621C080085CDB2 /* CustomFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8056919028621C080085CDB2 /* CustomFontModifier.swift */; };
 		808B07E82857A7120078B3A5 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808B07E72857A7120078B3A5 /* CardModel.swift */; };
 		808B07EB2857ACB10078B3A5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808B07EA2857ACB10078B3A5 /* Color.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +28,10 @@
 		801DFE9928563C99008151EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		801DFEA12856494C008151EE /* OneCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCardView.swift; sourceTree = "<group>"; };
 		805691852858DA870085CDB2 /* CardVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardVM.swift; sourceTree = "<group>"; };
+		80569187286205DF0085CDB2 /* BambooHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BambooHomeView.swift; sourceTree = "<group>"; };
+		8056918A286218DA0085CDB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8056918D28621A850085CDB2 /* HanaleiFill-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HanaleiFill-Regular.ttf"; sourceTree = "<group>"; };
+		8056919028621C080085CDB2 /* CustomFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontModifier.swift; sourceTree = "<group>"; };
 		808B07E72857A7120078B3A5 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		808B07EA2857ACB10078B3A5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +72,8 @@
 				801DFEA028563CA7008151EE /* View */,
 				808B07E92857AC940078B3A5 /* Extension */,
 				801DFE9628563C99008151EE /* Assets.xcassets */,
+				8056918A286218DA0085CDB2 /* Info.plist */,
+				8056918D28621A850085CDB2 /* HanaleiFill-Regular.ttf */,
 				801DFE9828563C99008151EE /* Preview Content */,
 			);
 			path = Odometer;
@@ -82,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				801DFE9428563C99008151EE /* HomeView.swift */,
+				80569187286205DF0085CDB2 /* BambooHomeView.swift */,
 				801DFEA12856494C008151EE /* OneCardView.swift */,
 			);
 			path = View;
@@ -107,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				808B07EA2857ACB10078B3A5 /* Color.swift */,
+				8056919028621C080085CDB2 /* CustomFontModifier.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -171,6 +182,7 @@
 			files = (
 				801DFE9A28563C99008151EE /* Preview Assets.xcassets in Resources */,
 				801DFE9728563C99008151EE /* Assets.xcassets in Resources */,
+				8056918F28621AA10085CDB2 /* HanaleiFill-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +196,8 @@
 				805691862858DA870085CDB2 /* CardVM.swift in Sources */,
 				801DFE9528563C99008151EE /* HomeView.swift in Sources */,
 				808B07E82857A7120078B3A5 /* CardModel.swift in Sources */,
+				80569188286205DF0085CDB2 /* BambooHomeView.swift in Sources */,
+				8056919128621C080085CDB2 /* CustomFontModifier.swift in Sources */,
 				801DFEA22856494C008151EE /* OneCardView.swift in Sources */,
 				808B07EB2857ACB10078B3A5 /* Color.swift in Sources */,
 				801DFE9328563C99008151EE /* OdometerApp.swift in Sources */,
@@ -318,6 +332,7 @@
 				DEVELOPMENT_TEAM = 879U287R5Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Odometer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -347,6 +362,7 @@
 				DEVELOPMENT_TEAM = 879U287R5Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Odometer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
