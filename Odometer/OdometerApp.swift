@@ -11,7 +11,8 @@ import SwiftUI
 struct OdometerApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+//            HomeView()
+            BambooHomeView()
         }
     }
 }
